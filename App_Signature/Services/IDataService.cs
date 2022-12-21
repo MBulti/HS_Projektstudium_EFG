@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App_Signature.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace App_Signature.Services
 {
     public interface IDataService
     {
+        Task<List<TourModel>> GetTourData();
     }
 }

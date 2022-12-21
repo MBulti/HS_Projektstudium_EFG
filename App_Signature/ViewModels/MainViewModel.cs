@@ -10,14 +10,19 @@ namespace App_Signature.ViewModels
 {
     public partial class MainViewModel : BaseViewModel
     {
+        #region Declarations
+        private IDataService dataService;
+        #endregion
+
         #region Properties
         [ObservableProperty]
         string userName;
         #endregion
 
         #region Public
-        public MainViewModel()
+        public MainViewModel(IDataService dataService)
         {
+            this.dataService = dataService;
         }
         #endregion
 
@@ -26,6 +31,8 @@ namespace App_Signature.ViewModels
         async void Test()
         {
             await Task.CompletedTask;
+
+            await dataService.GetTourData();
         }
         #endregion
     }

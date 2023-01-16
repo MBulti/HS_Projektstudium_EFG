@@ -9,10 +9,10 @@ namespace App_Signature.Services
 {
     public class DataService : IDataService
     {
-        public async Task<List<TourModel>> GetTourData()
+        public async Task<List<TripModel>> GetTripData()
         {
             await Task.CompletedTask;
-            return new List<TourModel>();
+            return new List<TripModel>();
         }
     }
 }

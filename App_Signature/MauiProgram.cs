@@ -33,9 +33,13 @@ public static class MauiProgram
         #endregion
         #region Views
         builder.Services.AddTransient<MainView>();
+        builder.Services.AddTransient<TripView>();
+        builder.Services.AddTransient<SettingsView>();
         #endregion
         #region ViewModels
         builder.Services.AddTransient<MainViewModel>();
+        builder.Services.AddTransient<TripViewModel>();
+        builder.Services.AddTransient<SettingsViewModel>();
         #endregion
 
         return builder.Build();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace App_Signature.Models
 {
-    public class TourModel
+    public class TripModel
     {
         public int TourNo { get; set; }
         public string Carrier { get; set; }
@@ -22,14 +22,14 @@ namespace App_Signature.Models
         public string EndCity { get; set; }
         public string PalletSpaces { get; set; }
         public decimal WeigthTotal { get; set; }
-        public List<TourOrderModel> Orders { get; set; }
-        public TourModel()
+        public List<TripEventModel> Orders { get; set; }
+        public TripModel()
         {
-            Orders = new List<TourOrderModel>();
+            Orders = new List<TripEventModel>();
         }
     }
 
-    public class TourOrderModel
+    public class TripEventModel
     {
         public int OrdercodeNav { get; set; }
         public string ReceiverName { get; set; }
@@ -39,13 +39,13 @@ namespace App_Signature.Models
         public string ReceiverCity { get; set; }
         public string CarrierInformation { get; set; }
         public string WeightOrder { get; set; }
-        public List<OrderItemModel> Items { get; set; }
-        public TourOrderModel()
+        public List<TripEventDetailModel> Items { get; set; }
+        public TripEventModel()
         {
-            Items = new List<OrderItemModel>();
+            Items = new List<TripEventDetailModel>();
         }
     }
-    public class OrderItemModel
+    public class TripEventDetailModel
     {
         public int ItemCode { get; set; }
         public string Description { get; set; }

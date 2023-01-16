@@ -5,9 +5,7 @@
         [ObservableProperty]
         private bool isBusy;
 
-        [ObservableProperty]
-        private string title;
-
+        protected LocalizationResourceManager Resources => LocalizationResourceManager.Instance;
         public BaseViewModel()
         {
 

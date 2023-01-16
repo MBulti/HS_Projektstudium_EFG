@@ -9,6 +9,6 @@ namespace App_Signature.Services
 {
     public interface IDataService
     {
-        Task<List<TourModel>> GetTourData();
+        Task<List<TripModel>> GetTripData();
     }
 }

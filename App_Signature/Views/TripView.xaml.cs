@@ -1,8 +1,8 @@
 namespace App_Signature.Views;
 
-public partial class MainView : ContentPage
+public partial class TripView : ContentPage
 {
-	public MainView(MainViewModel vm)
+	public TripView(TripViewModel vm)
 	{
 		InitializeComponent();
 		BindingContext = vm;

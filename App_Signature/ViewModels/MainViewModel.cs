@@ -1,38 +1,31 @@
-﻿using App_Signature.ViewModels.Base;
-using CommunityToolkit.Mvvm.Input;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Maui.Platform;
+using Newtonsoft.Json;
+using System.Globalization;
 
 namespace App_Signature.ViewModels
 {
     public partial class MainViewModel : BaseViewModel
     {
-        #region Declarations
-        private IDataService dataService;
-        #endregion
-
-        #region Properties
-        [ObservableProperty]
-        string userName;
-        #endregion
-
         #region Public
-        public MainViewModel(IDataService dataService)
+        public MainViewModel()
         {
-            this.dataService = dataService;
+            Init();
         }
         #endregion
 
-        #region Commands
-        [RelayCommand]
-        async void Test()
+        #region Private
+        private async void Init()
         {
-            await Task.CompletedTask;
+            #region Setup locale
+            var cultureInfo = CultureInfo.CurrentCulture;
+            var currentCulture = Preferences.Get(nameof(GlobalSettings.CultureInfo), string.Empty);
+            if (!string.IsNullOrWhiteSpace(currentCulture))
+                cultureInfo = JsonConvert.DeserializeObject<CultureInfo>(currentCulture);
 
-            await dataService.GetTourData();
+            Resources.SetCulture(cultureInfo);
+            #endregion
+            await Task.Delay(500);
+            await Shell.Current.GoToAsync($"//{nameof(TripView)}");
         }
         #endregion
     }

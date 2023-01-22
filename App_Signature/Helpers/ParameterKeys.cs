@@ -8,5 +8,6 @@ namespace App_Signature.Helpers
 {
     public class ParameterKeys
     {
+        public const string TRIPMODEL = "TRIPMODEL";
     }
 }

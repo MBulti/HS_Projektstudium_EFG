@@ -10,5 +10,8 @@
         {
 
         }
+        public async virtual void OnLoaded()
+        {
+        }
     }
 }

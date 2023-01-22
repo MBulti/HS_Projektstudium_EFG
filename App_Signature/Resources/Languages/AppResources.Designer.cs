@@ -79,6 +79,33 @@ namespace App_Signature.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Current Trip: {0}.
+        /// </summary>
+        internal static string tripeventview_title {
+            get {
+                return ResourceManager.GetString("tripeventview_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        internal static string tripview_btn_opensettings {
+            get {
+                return ResourceManager.GetString("tripview_btn_opensettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Refresh.
+        /// </summary>
+        internal static string tripview_btn_refreshtrips {
+            get {
+                return ResourceManager.GetString("tripview_btn_refreshtrips", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Trip.
         /// </summary>
         internal static string tripview_title {

@@ -13,8 +13,9 @@ public static class MauiProgram
             .UseMauiCommunityToolkit()
 			.ConfigureFonts(fonts =>
 			{
-				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+				//fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+				//fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                fonts.AddFont("Montserrat-Regular.ttf", "MontserratRegular");
 			});
 
 #if DEBUG
@@ -33,13 +34,17 @@ public static class MauiProgram
         #endregion
         #region Views
         builder.Services.AddTransient<MainView>();
-        builder.Services.AddTransient<TripView>();
         builder.Services.AddTransient<SettingsView>();
+        builder.Services.AddTransient<TripView>();
+        builder.Services.AddTransient<TripEventView>();
+        builder.Services.AddTransient<SignatureView>();
         #endregion
         #region ViewModels
         builder.Services.AddTransient<MainViewModel>();
-        builder.Services.AddTransient<TripViewModel>();
         builder.Services.AddTransient<SettingsViewModel>();
+        builder.Services.AddTransient<TripViewModel>();
+        builder.Services.AddTransient<TripEventViewModel>();
+        builder.Services.AddTransient<SignatureViewModel>();
         #endregion
 
         return builder.Build();

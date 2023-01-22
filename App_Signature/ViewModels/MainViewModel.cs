@@ -9,13 +9,18 @@ namespace App_Signature.ViewModels
         #region Public
         public MainViewModel()
         {
-            Init();
+        }
+        public override async void OnLoaded()
+        {
+            base.OnLoaded();
+            await Init();
         }
         #endregion
 
         #region Private
-        private async void Init()
+        private async Task Init()
         {
+            Application.Current.UserAppTheme = AppTheme.Light;
             #region Setup locale
             var cultureInfo = CultureInfo.CurrentCulture;
             var currentCulture = Preferences.Get(nameof(GlobalSettings.CultureInfo), string.Empty);

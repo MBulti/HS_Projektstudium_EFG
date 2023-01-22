@@ -123,6 +123,15 @@
   <data name="settingsview_title" xml:space="preserve">
     <value>Einstellungen</value>
   </data>
+  <data name="tripeventview_title" xml:space="preserve">
+    <value>Aktueller Auftrag: {0}</value>
+  </data>
+  <data name="tripview_btn_opensettings" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="tripview_btn_refreshtrips" xml:space="preserve">
+    <value>Aktualisieren</value>
+  </data>
   <data name="tripview_title" xml:space="preserve">
     <value>Touren</value>
   </data>

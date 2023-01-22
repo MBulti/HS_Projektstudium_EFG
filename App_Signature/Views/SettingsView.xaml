@@ -2,9 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ext="clr-namespace:App_Signature.Extensions"
-             x:Class="App_Signature.Views.SettingsView"
+             xmlns:vm="clr-namespace:App_Signature.ViewModels"
+             x:Class="App_Signature.Views.SettingsView" x:DataType="vm:SettingsViewModel"
              Title="{ext:Translate settingsview_title}">
-    <VerticalStackLayout>
+    <VerticalStackLayout Margin="10">
+        <Image Source="logo_efg.png" HeightRequest="100" HorizontalOptions="End"/>
         <Label 
             Text="{ext:Translate settingsview_la_selectedlanguage}"
             VerticalOptions="Center" 

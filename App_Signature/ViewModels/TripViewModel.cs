@@ -8,7 +8,7 @@
 
         #region Properties
         [ObservableProperty]
-        string userName;
+        List<TripModel> lsTrips;
         #endregion
 
         #region Public
@@ -16,22 +16,37 @@
         {
             this.dataService = dataService;
         }
-
+        public override async void OnLoaded()
+        {
+            base.OnLoaded();
+            await RefreshTrips();
+        }
         #endregion
 
         #region Commands
         [RelayCommand]
-        async void Test()
+        async void OpenSettings()
         {
             await Shell.Current.GoToAsync($"{nameof(SettingsView)}");
-
-
-            //var transValue = AppResources.settingsview_title;
-            //var data = await dataService.GetTripData();
-            //if (data != null)
-            //{
-
-            //}
+        }
+        [RelayCommand]
+        async Task RefreshTrips()
+        {
+            IsBusy = true;
+            var data = await dataService.GetTripData();
+            if (data != null)
+            {
+                LsTrips = data;
+                IsBusy = false;
+            }
+        }
+        [RelayCommand]
+        async void TripItemTapped(TripModel trip)
+        {
+            await Shell.Current.GoToAsync($"{nameof(TripEventView)}", true, new Dictionary<string, object>
+            {
+                { ParameterKeys.TRIPMODEL, trip }
+            });
         }
         #endregion
     }

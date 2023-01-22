@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App_Signature.Views.MainView"
-             Title="MainView">
-    <VerticalStackLayout>
-        <ActivityIndicator IsVisible="True" IsRunning="True" HorizontalOptions="Center" VerticalOptions="Center"/>
-    </VerticalStackLayout>
+             xmlns:vm="clr-namespace:App_Signature.ViewModels"
+             x:Class="App_Signature.Views.MainView" x:DataType="vm:MainViewModel"
+             Loaded="ContentPage_Loaded">
+    <Grid>
+        <ActivityIndicator IsVisible="True" IsRunning="True" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+    </Grid>
 </ContentPage>

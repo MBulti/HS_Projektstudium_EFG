@@ -7,4 +7,9 @@ public partial class MainView : ContentPage
 		InitializeComponent();
 		BindingContext = vm;
 	}
+
+    private void ContentPage_Loaded(object sender, EventArgs e)
+    {
+		((BaseViewModel)BindingContext).OnLoaded();
+    }
 }

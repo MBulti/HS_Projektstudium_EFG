@@ -123,6 +123,15 @@
   <data name="settingsview_title" xml:space="preserve">
     <value>Settings</value>
   </data>
+  <data name="tripeventview_title" xml:space="preserve">
+    <value>Current Trip: {0}</value>
+  </data>
+  <data name="tripview_btn_opensettings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="tripview_btn_refreshtrips" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
   <data name="tripview_title" xml:space="preserve">
     <value>Trip</value>
   </data>

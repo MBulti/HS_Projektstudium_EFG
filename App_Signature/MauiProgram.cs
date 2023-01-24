@@ -37,14 +37,12 @@ public static class MauiProgram
         builder.Services.AddTransient<SettingsView>();
         builder.Services.AddTransient<TripView>();
         builder.Services.AddTransient<TripEventView>();
-        builder.Services.AddTransient<SignatureView>();
         #endregion
         #region ViewModels
         builder.Services.AddTransient<MainViewModel>();
         builder.Services.AddTransient<SettingsViewModel>();
         builder.Services.AddTransient<TripViewModel>();
         builder.Services.AddTransient<TripEventViewModel>();
-        builder.Services.AddTransient<SignatureViewModel>();
         #endregion
 
         return builder.Build();

@@ -11,6 +11,5 @@ public partial class AppShell : Shell
 
 		// trip
 		Routing.RegisterRoute(nameof(TripEventView), typeof(TripEventView));
-        Routing.RegisterRoute(nameof(SignatureView), typeof(SignatureView));
     }
 }

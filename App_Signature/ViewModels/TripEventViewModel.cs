@@ -9,6 +9,9 @@
 
         [ObservableProperty]
         string title;
+
+        [ObservableProperty]
+        ImageSource imageStream;
         #endregion
 
         #region Public
@@ -21,9 +24,10 @@
 
         #region Commands
         [RelayCommand]
-        async void Sign()
+        async void Sign(SignatureModel signatureModel)
         {
-            await Shell.Current.GoToAsync($"{nameof(SignatureView)}");
+            if (signatureModel != null)
+                ImageStream = ImageSource.FromStream(() => signatureModel.Signature);
         }
         #endregion
     }

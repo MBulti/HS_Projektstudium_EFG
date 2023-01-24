@@ -117,11 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="const_cancel" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="const_save" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
   <data name="settingsview_la_selectedlanguage" xml:space="preserve">
     <value>Ausgewählte Sprache: Deutsch</value>
   </data>
   <data name="settingsview_title" xml:space="preserve">
     <value>Einstellungen</value>
+  </data>
+  <data name="signaturepopup_btn_clear" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="signaturepopup_missingname" xml:space="preserve">
+    <value>Bitte geben Sie einen Namen ein und erfassen Sie die Unterschrift</value>
+  </data>
+  <data name="signaturepopup_sign" xml:space="preserve">
+    <value>hier unterschreiben</value>
+  </data>
+  <data name="signaturepopup_watermarkname" xml:space="preserve">
+    <value>Name eingeben</value>
+  </data>
+  <data name="tripeventview_collectsignature" xml:space="preserve">
+    <value>Unterschrift erfassen</value>
   </data>
   <data name="tripeventview_title" xml:space="preserve">
     <value>Aktueller Auftrag: {0}</value>
@@ -132,7 +153,13 @@
   <data name="tripview_btn_refreshtrips" xml:space="preserve">
     <value>Aktualisieren</value>
   </data>
+  <data name="tripview_filter" xml:space="preserve">
+    <value>Auftrag / Tour filtern</value>
+  </data>
   <data name="tripview_title" xml:space="preserve">
     <value>Touren</value>
+  </data>
+  <data name="tripview_watermarkfilter" xml:space="preserve">
+    <value>Auftragsnummer</value>
   </data>
 </root>

@@ -13,5 +13,9 @@
         public async virtual void OnLoaded()
         {
         }
+        public async virtual void OnAppearing()
+        {
+
+        }
     }
 }

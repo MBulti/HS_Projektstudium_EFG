@@ -11,4 +11,15 @@ public partial class TripView : ContentPage
     {
         ((BaseViewModel)BindingContext).OnLoaded();
     }
+
+    private void Entry_Unfocused(object sender, FocusEventArgs e)
+    {
+        TripFilter.IsEnabled = false;
+        TripFilter.IsEnabled = true;
+    }
+
+    private void ContentPage_Appearing(object sender, EventArgs e)
+    {
+        ((BaseViewModel)BindingContext).OnAppearing();
+    }
 }

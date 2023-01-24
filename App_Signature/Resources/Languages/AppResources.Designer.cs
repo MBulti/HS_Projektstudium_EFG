@@ -61,6 +61,24 @@ namespace App_Signature.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string const_cancel {
+            get {
+                return ResourceManager.GetString("const_cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        internal static string const_save {
+            get {
+                return ResourceManager.GetString("const_save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Selected language: english.
         /// </summary>
         internal static string settingsview_la_selectedlanguage {
@@ -75,6 +93,51 @@ namespace App_Signature.Resources.Languages {
         internal static string settingsview_title {
             get {
                 return ResourceManager.GetString("settingsview_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear.
+        /// </summary>
+        internal static string signaturepopup_btn_clear {
+            get {
+                return ResourceManager.GetString("signaturepopup_btn_clear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter a name and collect the signature.
+        /// </summary>
+        internal static string signaturepopup_missingname {
+            get {
+                return ResourceManager.GetString("signaturepopup_missingname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to sign here.
+        /// </summary>
+        internal static string signaturepopup_sign {
+            get {
+                return ResourceManager.GetString("signaturepopup_sign", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter a name.
+        /// </summary>
+        internal static string signaturepopup_watermarkname {
+            get {
+                return ResourceManager.GetString("signaturepopup_watermarkname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Collect Signature.
+        /// </summary>
+        internal static string tripeventview_collectsignature {
+            get {
+                return ResourceManager.GetString("tripeventview_collectsignature", resourceCulture);
             }
         }
         
@@ -106,11 +169,29 @@ namespace App_Signature.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Filter by Order / Trip.
+        /// </summary>
+        internal static string tripview_filter {
+            get {
+                return ResourceManager.GetString("tripview_filter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Trip.
         /// </summary>
         internal static string tripview_title {
             get {
                 return ResourceManager.GetString("tripview_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tripnumber.
+        /// </summary>
+        internal static string tripview_watermarkfilter {
+            get {
+                return ResourceManager.GetString("tripview_watermarkfilter", resourceCulture);
             }
         }
     }

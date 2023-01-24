@@ -4,11 +4,15 @@
     {
         #region Declarations
         private IDataService dataService;
+        private List<TripModel> lsAllTrips = new();
         #endregion
 
         #region Properties
         [ObservableProperty]
         List<TripModel> lsTrips;
+
+        [ObservableProperty]
+        string filter;
         #endregion
 
         #region Public
@@ -20,6 +24,11 @@
         {
             base.OnLoaded();
             await RefreshTrips();
+        }
+        public override void OnAppearing()
+        {
+            IsBusy = false;
+            base.OnAppearing();
         }
         #endregion
 
@@ -36,17 +45,27 @@
             var data = await dataService.GetTripData();
             if (data != null)
             {
-                LsTrips = data;
+                lsAllTrips = data;
                 IsBusy = false;
             }
+            FilterChanged();
         }
         [RelayCommand]
         async void TripItemTapped(TripModel trip)
         {
+            IsBusy = true;
             await Shell.Current.GoToAsync($"{nameof(TripEventView)}", true, new Dictionary<string, object>
             {
                 { ParameterKeys.TRIPMODEL, trip }
             });
+        }
+        [RelayCommand]
+        void FilterChanged()
+        {
+            if (!string.IsNullOrWhiteSpace(filter))
+                LsTrips = lsAllTrips.Where(bu => bu.TourNo.ToString().StartsWith(filter)).ToList();
+            else
+                LsTrips = lsAllTrips;
         }
         #endregion
     }

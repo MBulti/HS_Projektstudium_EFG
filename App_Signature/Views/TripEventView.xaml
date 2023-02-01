@@ -60,15 +60,7 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-
-            <VerticalStackLayout Grid.Row="2">
-                <Label
-            Text="DEBUG"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-                <Image Source="{Binding ImageStream}" HeightRequest="200" WidthRequest="500" BackgroundColor="White"/>
-            </VerticalStackLayout>
-            <Button Grid.Row="3" Clicked="Sign_Clicked" Text="{ext:Translate tripeventview_collectsignature}"/>
+            <Button x:Name="btnSignature" Grid.Row="3" Clicked="Sign_Clicked" IsEnabled="{Binding IsSignatureEnabled}" Text="{ext:Translate tripeventview_collectsignature}"/>
             <ActivityIndicator Grid.Row="0" Grid.RowSpan="4" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
         </Grid>
     </ScrollView>

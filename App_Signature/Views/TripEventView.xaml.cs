@@ -18,6 +18,7 @@ public partial class TripEventView : ContentPage
     // currently the popups are only supported in MVC style ...
     private async void Sign_Clicked(object sender, EventArgs e)
     {
+        btnSignature.IsEnabled = false;
         var result = await this.ShowPopupAsync(new SignaturePopUp()) as SignatureModel;
         if (result != null) 
         {
@@ -27,5 +28,6 @@ public partial class TripEventView : ContentPage
 
             tripEventViewModel.SignCommand.Execute(result);
         }
+        btnSignature.IsEnabled = true;
     }
 }

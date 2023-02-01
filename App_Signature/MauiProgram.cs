@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
+using PdfSharpCore.Fonts;
 
 namespace App_Signature;
 
@@ -17,9 +18,10 @@ public static class MauiProgram
 				//fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 fonts.AddFont("Montserrat-Regular.ttf", "MontserratRegular");
 			});
+        GlobalFontSettings.FontResolver = new CustomFontResolver();
 
 #if DEBUG
-		builder.Logging.AddDebug();
+        builder.Logging.AddDebug();
 #endif
 
         #region Services
@@ -31,6 +33,7 @@ public static class MauiProgram
         {
             builder.Services.AddSingleton<IDataService, DataService>();
         }
+        builder.Services.AddSingleton<IPDFService, PDFService>();
         #endregion
         #region Views
         builder.Services.AddTransient<MainView>();

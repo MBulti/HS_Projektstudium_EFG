@@ -14,5 +14,10 @@ namespace App_Signature.Services
             await Task.CompletedTask;
             return new List<TripModel>();
         }
+        public async Task<bool> ExportSignature(TripModel model)
+        {
+            await Task.CompletedTask;
+            return true;
+        }
     }
 }

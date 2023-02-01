@@ -133,13 +133,13 @@
     <value>Clear</value>
   </data>
   <data name="signaturepopup_missingname" xml:space="preserve">
-    <value>Please enter a name and collect the signature</value>
+    <value>Please collect the signature</value>
   </data>
   <data name="signaturepopup_sign" xml:space="preserve">
     <value>sign here</value>
   </data>
   <data name="signaturepopup_watermarkname" xml:space="preserve">
-    <value>Enter a name</value>
+    <value>Optional: Enter a name</value>
   </data>
   <data name="tripeventview_collectsignature" xml:space="preserve">
     <value>Collect Signature</value>

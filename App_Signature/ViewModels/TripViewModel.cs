@@ -20,14 +20,16 @@
         {
             this.dataService = dataService;
         }
-        public override async void OnLoaded()
-        {
-            base.OnLoaded();
-            await RefreshTrips();
-        }
-        public override void OnAppearing()
+        // we already reload the data in the "OnAppearing"
+        //public override async void OnLoaded()
+        //{
+        //    base.OnLoaded();
+        //    await RefreshTrips();
+        //}
+        public override async void OnAppearing()
         {
             IsBusy = false;
+            await RefreshTrips();
             base.OnAppearing();
         }
         #endregion

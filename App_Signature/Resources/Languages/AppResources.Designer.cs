@@ -106,7 +106,7 @@ namespace App_Signature.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please enter a name and collect the signature.
+        ///   Looks up a localized string similar to Please collect the signature.
         /// </summary>
         internal static string signaturepopup_missingname {
             get {
@@ -124,7 +124,7 @@ namespace App_Signature.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter a name.
+        ///   Looks up a localized string similar to Optional: Enter a name.
         /// </summary>
         internal static string signaturepopup_watermarkname {
             get {

@@ -32,7 +32,7 @@ public partial class SignaturePopUp : Popup
     }
     private async void SaveSignature_Clicked(object sender, EventArgs e)
     {
-        if (string.IsNullOrWhiteSpace(SignatureEntry.Text) || !SignatureView.Lines.Any())
+        if (!SignatureView.Lines.Any())
         {
             EmptySignature.IsVisible = true;
             return;
@@ -55,7 +55,7 @@ public partial class SignaturePopUp : Popup
         });
         SignatureModel resultModel = new SignatureModel()
         {
-            Name = SignatureEntry.Text.Trim(),
+            Name = SignatureEntry.Text?.Trim(),
             Signature = await DrawingView.GetImageStream(SignatureView.Lines, new Size(SignatureView.Width, SignatureView.Height), Brush.White)
         };
         Close(resultModel);

@@ -133,13 +133,13 @@
     <value>Löschen</value>
   </data>
   <data name="signaturepopup_missingname" xml:space="preserve">
-    <value>Bitte geben Sie einen Namen ein und erfassen Sie die Unterschrift</value>
+    <value>Bitte erfassen Sie die Unterschrift</value>
   </data>
   <data name="signaturepopup_sign" xml:space="preserve">
     <value>hier unterschreiben</value>
   </data>
   <data name="signaturepopup_watermarkname" xml:space="preserve">
-    <value>Name eingeben</value>
+    <value>Optional: Name eingeben</value>
   </data>
   <data name="tripeventview_collectsignature" xml:space="preserve">
     <value>Unterschrift erfassen</value>

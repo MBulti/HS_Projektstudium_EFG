@@ -10,5 +10,7 @@ namespace App_Signature.Services
     public interface IDataService
     {
         Task<List<TripModel>> GetTripData();
+
+        Task<bool> ExportSignature(TripModel model);
     }
 }

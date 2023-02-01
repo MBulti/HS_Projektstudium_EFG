@@ -18,7 +18,7 @@ public partial class TripEventView : ContentPage
     // currently the popups are only supported in MVC style ...
     private async void Sign_Clicked(object sender, EventArgs e)
     {
-        var result = await this.ShowPopupAsync(new SignaturePopUp());
+        var result = await this.ShowPopupAsync(new SignaturePopUp()) as SignatureModel;
         if (result != null) 
         {
             var tripEventViewModel = BindingContext as TripEventViewModel;

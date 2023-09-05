@@ -145,7 +145,7 @@
     <value>Unterschrift erfassen</value>
   </data>
   <data name="tripeventview_title" xml:space="preserve">
-    <value>Aktueller Auftrag: {0}</value>
+    <value>Aktuelle Tour: {0}</value>
   </data>
   <data name="tripview_btn_opensettings" xml:space="preserve">
     <value>Einstellungen</value>
@@ -160,6 +160,6 @@
     <value>Touren</value>
   </data>
   <data name="tripview_watermarkfilter" xml:space="preserve">
-    <value>Auftragsnummer</value>
+    <value>Tour-/Auftragsnummer</value>
   </data>
 </root>

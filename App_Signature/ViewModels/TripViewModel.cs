@@ -32,14 +32,6 @@
             await RefreshTrips();
             base.OnAppearing();
         }
-        #endregion
-
-        #region Commands
-        [RelayCommand]
-        async void OpenSettings()
-        {
-            await Shell.Current.GoToAsync($"{nameof(SettingsView)}");
-        }
         [RelayCommand]
         async Task RefreshTrips()
         {
@@ -51,6 +43,12 @@
                 IsBusy = false;
             }
             FilterChanged();
+        }
+
+        [RelayCommand]
+        async void OpenSettings()
+        {
+            await Shell.Current.GoToAsync($"{nameof(SettingsView)}");
         }
         [RelayCommand]
         async void TripItemTapped(TripModel trip)
@@ -65,7 +63,16 @@
         void FilterChanged()
         {
             if (!string.IsNullOrWhiteSpace(filter))
-                LsTrips = lsAllTrips.Where(bu => bu.TourNo.ToString().StartsWith(filter)).ToList();
+            {
+                LsTrips = lsAllTrips.Where(trip => trip.TourNo.ToString().StartsWith(filter)).ToList();
+                if (!LsTrips.Any())
+                {
+                    LsTrips = (from trip in lsAllTrips
+                              from orders in trip.Orders
+                              where orders.OrdercodeNav.ToString().StartsWith(filter)
+                              select trip).DistinctBy(trip => trip.TourNo).ToList();
+                }
+            }
             else
                 LsTrips = lsAllTrips;
         }

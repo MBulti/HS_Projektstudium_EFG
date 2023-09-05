@@ -4,6 +4,7 @@
              xmlns:ext="clr-namespace:App_Signature.Extensions"
              xmlns:vm="clr-namespace:App_Signature.ViewModels"
              x:Class="App_Signature.Views.SettingsView" x:DataType="vm:SettingsViewModel"
+             BackgroundColor="{StaticResource Secondary}"
              Title="{ext:Translate settingsview_title}">
     <VerticalStackLayout Margin="10">
         <Image Source="logo_efg.png" HeightRequest="100" HorizontalOptions="End"/>

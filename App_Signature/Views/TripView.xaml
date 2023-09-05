@@ -30,7 +30,7 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     <Label Grid.Row="0" Text="{ext:Translate tripview_filter}" VerticalOptions="End" HorizontalOptions="Center"/>
-                    <Entry Grid.Row="1" x:Name="TripFilter" Placeholder="{ext:Translate tripview_watermarkfilter}" IsTextPredictionEnabled="False" VerticalTextAlignment="End" VerticalOptions="Start" Text="{Binding Filter}" Keyboard="Numeric" FontSize="Medium" Unfocused="Entry_Unfocused">
+                    <Entry Grid.Row="1" Text="{Binding Filter}" x:Name="TripFilter" Placeholder="{ext:Translate tripview_watermarkfilter}" IsTextPredictionEnabled="False" VerticalTextAlignment="End" VerticalOptions="Start"  Keyboard="Numeric" FontSize="Medium" Unfocused="Entry_Unfocused">
                         <Entry.Behaviors>
                             <toolkit:EventToCommandBehavior EventName="TextChanged" Command="{Binding FilterChangedCommand}" />
                         </Entry.Behaviors>
